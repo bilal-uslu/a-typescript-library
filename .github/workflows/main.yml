@@ -2,8 +2,8 @@ name: CI
 on: 
   push:
     paths:
-      - "library/**"
-      - ".github/workflows/main.yaml"
+      - library/**
+      - .github/workflows/main.yaml
 
 jobs:
   build:
