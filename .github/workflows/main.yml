@@ -16,14 +16,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use Node ${{ matrix.node }}
-        working-directory: ./library
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
+        working-directory: ./library
 
       - name: Install deps and build (with cache)
-        working-directory: ./library
         uses: bahmutov/npm-install@v1
+        working-directory: ./library
 
       - name: Lint
         working-directory: ./library
