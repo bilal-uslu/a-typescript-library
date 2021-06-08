@@ -12,11 +12,9 @@ jobs:
       matrix:
         node: ['14.x']
         os: [ubuntu-latest]
-
     defaults:
       run:
         working-directory: ./library
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
