@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - 'library/**'
-      - '.github/workflows/main.yaml**'
+      - '.github/workflows/main.yml'
 
 jobs:
   build:
