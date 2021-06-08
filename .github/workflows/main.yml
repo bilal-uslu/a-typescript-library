@@ -6,13 +6,14 @@ jobs:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: ./library
     strategy:
       matrix:
         node: ['14.x']
         os: [ubuntu-latest]
-    defaults:
-      run:
-        working-directory: ./library
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -26,13 +27,10 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Lint
-        working-directory: ./library
         run: yarn lint
 
       - name: Test
-        working-directory: ./library
         run: yarn test --ci --coverage --maxWorkers=2
 
       - name: Build
-        working-directory: ./library
         run: yarn build
