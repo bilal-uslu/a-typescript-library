@@ -1,8 +1,8 @@
 name: CI
 on: push
-  paths:
-    - "library/**"
-    - ".github/workflows/main.yaml"
+      paths:
+        - "library/**"
+        - ".github/workflows/main.yaml"
 
 defaults:
   run:
