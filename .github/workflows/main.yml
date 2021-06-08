@@ -1,5 +1,13 @@
 name: CI
 on: [push]
+  paths:
+    - "library/**"
+    - ".github/workflows/main.yaml"
+
+defaults:
+  run:
+    working-directory: ./library
+    
 jobs:
   build:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
