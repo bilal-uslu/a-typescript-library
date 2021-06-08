@@ -22,7 +22,6 @@ jobs:
 
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
-        working-directory: ./library
 
       - name: Lint
         working-directory: ./library
