@@ -1,9 +1,9 @@
 name: CI
-on: push
+on: push:
       paths:
         - "library/**"
         - ".github/workflows/main.yaml"
-        
+                
 jobs:
   build:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
